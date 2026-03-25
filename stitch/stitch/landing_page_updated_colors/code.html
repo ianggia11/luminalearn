@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+
+<html lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#66b2b2",
+                        "background-light": "#f6f7f7",
+                        "background-dark": "#161c1c",
+                    },
+                    fontFamily: {
+                        "display": ["Inter", "sans-serif"]
+                    },
+                    borderRadius: {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "full": "9999px"
+                    },
+                },
+            },
+        }
+    </script>
+<title>EduStream - Master New Skills</title>
+</head>
+<body class="bg-background-light dark:bg-background-dark font-display text-slate-900 dark:text-slate-100">
+<div class="relative flex h-auto min-h-screen w-full flex-col group/design-root overflow-x-hidden">
+<div class="layout-container flex h-full grow flex-col">
+<!-- Top Navigation Bar -->
+<header class="flex items-center justify-between whitespace-nowrap border-b border-solid border-primary/10 px-6 md:px-10 py-4 bg-background-light dark:bg-background-dark">
+<div class="flex items-center gap-8">
+<div class="flex items-center gap-3 text-primary">
+<div class="size-6">
+<svg fill="currentColor" viewbox="0 0 48 48" xmlns="http://www.w3.org/2000/svg">
+<path d="M24 4C25.7818 14.2173 33.7827 22.2182 44 24C33.7827 25.7818 25.7818 33.7827 24 44C22.2182 33.7827 14.2173 25.7818 4 24C14.2173 22.2182 22.2182 14.2173 24 4Z"></path>
+</svg>
+</div>
+<h2 class="text-slate-900 dark:text-slate-100 text-xl font-bold leading-tight tracking-tight">EduStream</h2>
+</div>
+<nav class="hidden md:flex items-center gap-8">
+<a class="text-slate-700 dark:text-slate-300 text-sm font-medium hover:text-primary transition-colors" href="#">Courses</a>
+<a class="text-slate-700 dark:text-slate-300 text-sm font-medium hover:text-primary transition-colors" href="#">Mentors</a>
+<a class="text-slate-700 dark:text-slate-300 text-sm font-medium hover:text-primary transition-colors" href="#">Pricing</a>
+<a class="text-slate-700 dark:text-slate-300 text-sm font-medium hover:text-primary transition-colors" href="#">About</a>
+</nav>
+</div>
+<div class="flex flex-1 justify-end gap-4 items-center">
+<label class="hidden lg:flex flex-col min-w-40 h-10 max-w-64">
+<div class="flex w-full flex-1 items-stretch rounded-lg h-full overflow-hidden border border-primary/20">
+<div class="text-slate-500 bg-white dark:bg-slate-800 flex items-center justify-center pl-4">
+<span class="material-symbols-outlined text-xl">search</span>
+</div>
+<input class="form-input flex w-full min-w-0 flex-1 border-none bg-white dark:bg-slate-800 text-slate-900 dark:text-slate-100 focus:outline-0 focus:ring-0 h-full placeholder:text-slate-400 px-4 pl-2 text-sm font-normal" placeholder="Search courses..." value=""/>
+</div>
+</label>
+<button class="flex min-w-[84px] cursor-pointer items-center justify-center rounded-lg h-10 px-5 bg-primary text-white text-sm font-bold hover:bg-primary/90 transition-all shadow-sm">
+<span class="truncate">Sign In</span>
+</button>
+<div class="bg-center bg-no-repeat aspect-square bg-cover rounded-full size-10 border-2 border-primary/20" data-alt="User profile avatar placeholder" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuCSdZ7G0R6YFYJohFweKw4u5Blu2RuGg1xnGC5_fTdwmKBMjujmR7kiib2OvD8dJae1Is7G8f4btJo6noIXB9d9dOWj6G8x-Sc58RrKMs38dceBdxVofYzjtLLUt3_Z6EWBfmBDiAifppHVLl5QbE2rcCODr4eUABOqY8u20CgsgacBdPEfPkA9cxVxeloCV5noG9WH_SvxLh-wF0sbsk2WKgPVVWcrFr5UA46eE6_DSWesk7mtlVusfXGy-8xqR-tLfzRf1gcZsSas");'></div>
+</div>
+</header>
+<main class="flex-1 max-w-7xl mx-auto w-full px-6 md:px-10 py-8">
+<!-- Hero Section -->
+<section class="@container mb-12">
+<div class="flex flex-col gap-8 lg:flex-row items-center lg:items-stretch">
+<div class="w-full bg-center bg-no-repeat aspect-video bg-cover rounded-xl shadow-lg lg:flex-1" data-alt="Students collaborating on laptops in a modern workspace" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuAgrma5gsto7nvWlEMKkDvarb8BrWnVW-FuRtCHi-Nfd8t3Is1L0vCTBLP86x_DGSbl0d-VsO47yH-vEPcXNbywHQG7YuQIzCrVdU6IbhFF3rxTms0PMGTuxwzFZ5NrTSAvJ5zNd3QHonQRrgWkuATTmIwSH6h4Q2rQJxm7pcS2GZBf3XsClw_cPPhvrqrMj5IQDqKY8mmyZ6RNfR83f81EJTIYGt0rhFJ6jDwuyyDhpnnK5-qtQ8Gy8M0_uDG2lxyND5YCVm_i9ub4");'></div>
+<div class="flex flex-col gap-8 lg:w-1/2 lg:justify-center lg:pl-8">
+<div class="flex flex-col gap-4">
+<span class="inline-flex items-center px-3 py-1 rounded-full text-xs font-semibold bg-primary/10 text-primary w-fit">New Teal Workspace</span>
+<h1 class="text-slate-900 dark:text-slate-100 text-4xl font-black leading-tight tracking-tight md:text-5xl lg:text-6xl">
+                                    Master New Skills with <span class="text-primary">Expert-Led</span> Courses
+                                </h1>
+<p class="text-slate-600 dark:text-slate-400 text-base md:text-lg leading-relaxed max-w-xl">
+                                    Join over 5,000 students learning data science, design, and business in our new teal-themed workspace. Professional growth starts here.
+                                </p>
+</div>
+<div class="flex flex-wrap gap-4">
+<button class="flex min-w-[160px] cursor-pointer items-center justify-center rounded-lg h-12 px-6 bg-primary text-white text-base font-bold hover:bg-primary/90 transition-all shadow-md">
+<span class="truncate">Explore Courses</span>
+</button>
+<button class="flex min-w-[160px] cursor-pointer items-center justify-center rounded-lg h-12 px-6 bg-white dark:bg-slate-800 border-2 border-primary/20 text-slate-900 dark:text-slate-100 text-base font-bold hover:bg-primary/5 transition-all">
+<span class="truncate">Apply Now</span>
+</button>
+</div>
+</div>
+</div>
+</section>
+<!-- Featured Courses Section -->
+<section class="mb-16">
+<div class="flex items-center justify-between mb-8">
+<h2 class="text-slate-900 dark:text-slate-100 text-2xl md:text-3xl font-bold leading-tight tracking-tight">Featured Courses</h2>
+<a class="text-primary font-semibold flex items-center gap-1 hover:underline" href="#">
+                            View all <span class="material-symbols-outlined">arrow_forward</span>
+</a>
+</div>
+<div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
+<!-- Course Card 1 -->
+<div class="flex flex-col gap-4 group cursor-pointer bg-white dark:bg-slate-800 p-4 rounded-xl shadow-sm border border-primary/5 hover:border-primary/20 hover:shadow-md transition-all">
+<div class="relative overflow-hidden rounded-lg">
+<div class="w-full aspect-video bg-center bg-no-repeat bg-cover group-hover:scale-105 transition-transform duration-500" data-alt="UI UX design interface on a screen" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuCjWJkbPwNcwJO-Di_BZ8eA-KOfm8AruzxC721Ty3d_qNYxsGHWnImhfZ8iE41cNRyknvZvieuCne8u7g9lpDz5-AKCoScjQzHFVmQj-e_BqBvJHu5tiyE8Ia1QGw4UXqyjZAsN6cspch-P_NrWVdsODIV4s1AzwBQwboIspm_WBqDW4wSGJvlacAUGq0EAZoMgZDJD-_5IvVeMuQa9_mej3-0B4NYNOua1s8KNjfnYo70PE3zOd8fUNh_DAoyEMPp9GNXKrPDtr_QT");'></div>
+<div class="absolute top-2 right-2 bg-white/90 backdrop-blur-sm dark:bg-slate-900/90 px-2 py-1 rounded text-xs font-bold text-primary">Best Seller</div>
+</div>
+<div>
+<h3 class="text-slate-900 dark:text-slate-100 text-lg font-bold leading-normal group-hover:text-primary transition-colors">UI/UX Design Mastery</h3>
+<div class="flex items-center gap-2 mt-1">
+<span class="text-primary font-bold">$49.99</span>
+<span class="text-slate-400 text-sm line-through">$79.99</span>
+</div>
+<div class="flex items-center gap-1 mt-2 text-amber-500">
+<span class="material-symbols-outlined text-sm fill-1">star</span>
+<span class="text-slate-600 dark:text-slate-400 text-sm font-medium">4.8 (1.2k reviews)</span>
+</div>
+</div>
+</div>
+<!-- Course Card 2 -->
+<div class="flex flex-col gap-4 group cursor-pointer bg-white dark:bg-slate-800 p-4 rounded-xl shadow-sm border border-primary/5 hover:border-primary/20 hover:shadow-md transition-all">
+<div class="relative overflow-hidden rounded-lg">
+<div class="w-full aspect-video bg-center bg-no-repeat bg-cover group-hover:scale-105 transition-transform duration-500" data-alt="Abstract data visualization charts" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuA9P-jlQoMxV29PVUdfgRYH9TkLbPF7Dg16uKUPPkUshmejgINd32z99ovtALROaROPGkTiBhXa-6Zi_94zOMW7N9NoA_vJhkgI4p3F6NnGSgeXycEnlWphTbsu5_Hq2Fk8sFF5iDwUDzqcr1elh7oayxSPUzuxXYMCsd-5DSJgMsOzYs71kV-XPO-UFviLqfU2Gsvsq8Y9prvHA1Ebo-ZtW-1-YRNCltoYz0adQLAAWO9o6pV0mbHqBOjLIwMz58Y_3WF_Wmw_PtUT");'></div>
+<div class="absolute top-2 right-2 bg-white/90 backdrop-blur-sm dark:bg-slate-900/90 px-2 py-1 rounded text-xs font-bold text-primary">Advanced</div>
+</div>
+<div>
+<h3 class="text-slate-900 dark:text-slate-100 text-lg font-bold leading-normal group-hover:text-primary transition-colors">Advanced Data Science</h3>
+<div class="flex items-center gap-2 mt-1">
+<span class="text-primary font-bold">$89.99</span>
+<span class="text-slate-400 text-sm line-through">$129.99</span>
+</div>
+<div class="flex items-center gap-1 mt-2 text-amber-500">
+<span class="material-symbols-outlined text-sm fill-1">star</span>
+<span class="text-slate-600 dark:text-slate-400 text-sm font-medium">4.9 (850 reviews)</span>
+</div>
+</div>
+</div>
+<!-- Course Card 3 -->
+<div class="flex flex-col gap-4 group cursor-pointer bg-white dark:bg-slate-800 p-4 rounded-xl shadow-sm border border-primary/5 hover:border-primary/20 hover:shadow-md transition-all">
+<div class="relative overflow-hidden rounded-lg">
+<div class="w-full aspect-video bg-center bg-no-repeat bg-cover group-hover:scale-105 transition-transform duration-500" data-alt="Marketing analytics dashboard" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuA7Il5q4oAUChU-Nb4GBFuKFIIhu0YGJsziH4L22XOO3WhObcgrbadEzeuE0NSeUv2fh2arCPf0gQ25iO-Rcv_gHLIIxBsBhsGg40_aStJpA8UneAVJTaEGfeWjJGWZf-p50oxR3B3OlM4nT1FmzubwiH_TmbbPQKbdAI8GX1SH_DoWIMCf6ymw3IHO35TcFgwamqQTdIAM36E64GGWcFi1nx5xWdfpCyFiIVkAPDXp12ZYRQCFlqk7tHaGSA4ZYVdyNbkEpMMXxglK");'></div>
+<div class="absolute top-2 right-2 bg-white/90 backdrop-blur-sm dark:bg-slate-900/90 px-2 py-1 rounded text-xs font-bold text-primary">Beginner</div>
+</div>
+<div>
+<h3 class="text-slate-900 dark:text-slate-100 text-lg font-bold leading-normal group-hover:text-primary transition-colors">Digital Marketing 101</h3>
+<div class="flex items-center gap-2 mt-1">
+<span class="text-primary font-bold">$39.99</span>
+<span class="text-slate-400 text-sm line-through">$59.99</span>
+</div>
+<div class="flex items-center gap-1 mt-2 text-amber-500">
+<span class="material-symbols-outlined text-sm fill-1">star</span>
+<span class="text-slate-600 dark:text-slate-400 text-sm font-medium">4.7 (2k reviews)</span>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Why Choose Us Section -->
+<section class="mb-12 py-12 bg-primary/5 rounded-2xl px-8">
+<div class="text-center mb-12">
+<h2 class="text-slate-900 dark:text-slate-100 text-3xl font-bold mb-4">Why Choose Us</h2>
+<p class="text-slate-600 dark:text-slate-400 max-w-2xl mx-auto">We provide the tools and mentorship needed to succeed in today's digital landscape.</p>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+<div class="flex flex-col items-center text-center p-6 bg-white dark:bg-slate-800 rounded-xl shadow-sm border border-primary/10">
+<div class="w-14 h-14 bg-primary/20 rounded-full flex items-center justify-center text-primary mb-4">
+<span class="material-symbols-outlined text-3xl">school</span>
+</div>
+<h4 class="text-lg font-bold mb-2">Expert Instructors</h4>
+<p class="text-sm text-slate-500 dark:text-slate-400">Learn from industry professionals with years of hands-on experience.</p>
+</div>
+<div class="flex flex-col items-center text-center p-6 bg-white dark:bg-slate-800 rounded-xl shadow-sm border border-primary/10">
+<div class="w-14 h-14 bg-primary/20 rounded-full flex items-center justify-center text-primary mb-4">
+<span class="material-symbols-outlined text-3xl">terminal</span>
+</div>
+<h4 class="text-lg font-bold mb-2">Hands-on Learning</h4>
+<p class="text-sm text-slate-500 dark:text-slate-400">Apply what you learn with real-world projects and collaborative coding.</p>
+</div>
+<div class="flex flex-col items-center text-center p-6 bg-white dark:bg-slate-800 rounded-xl shadow-sm border border-primary/10">
+<div class="w-14 h-14 bg-primary/20 rounded-full flex items-center justify-center text-primary mb-4">
+<span class="material-symbols-outlined text-3xl">group</span>
+</div>
+<h4 class="text-lg font-bold mb-2">Vibrant Community</h4>
+<p class="text-sm text-slate-500 dark:text-slate-400">Connect with peers and mentors in our exclusive student workspace.</p>
+</div>
+</div>
+</section>
+<!-- Call to Action Section -->
+<section class="relative overflow-hidden rounded-2xl bg-primary px-8 py-16 text-center text-white">
+<div class="relative z-10 flex flex-col items-center gap-6">
+<h2 class="text-3xl md:text-5xl font-black tracking-tight">Ready to boost your career?</h2>
+<p class="text-white/80 text-lg max-w-xl">Join the EduStream community today and get 20% off your first professional course.</p>
+<button class="flex min-w-[200px] cursor-pointer items-center justify-center rounded-lg h-14 px-8 bg-white text-primary text-lg font-black hover:bg-slate-100 transition-all shadow-xl">
+<span class="truncate">Apply Now</span>
+</button>
+</div>
+<!-- Abstract Background Elements -->
+<div class="absolute -bottom-12 -left-12 w-64 h-64 bg-white/10 rounded-full blur-3xl"></div>
+<div class="absolute -top-12 -right-12 w-64 h-64 bg-white/10 rounded-full blur-3xl"></div>
+</section>
+</main>
+<!-- Footer -->
+<footer class="border-t border-primary/10 py-10 px-10 bg-white dark:bg-slate-900">
+<div class="max-w-7xl mx-auto flex flex-col md:flex-row justify-between items-center gap-8 text-slate-500 dark:text-slate-400">
+<div class="flex items-center gap-3 text-primary">
+<div class="size-5">
+<svg fill="currentColor" viewbox="0 0 48 48" xmlns="http://www.w3.org/2000/svg">
+<path d="M24 4C25.7818 14.2173 33.7827 22.2182 44 24C33.7827 25.7818 25.7818 33.7827 24 44C22.2182 33.7827 14.2173 25.7818 4 24C14.2173 22.2182 22.2182 14.2173 24 4Z"></path>
+</svg>
+</div>
+<span class="text-slate-900 dark:text-slate-100 font-bold">EduStream</span>
+</div>
+<p class="text-sm">© 2024 EduStream Inc. All rights reserved.</p>
+<div class="flex items-center gap-6">
+<a class="hover:text-primary transition-colors" href="#">Privacy</a>
+<a class="hover:text-primary transition-colors" href="#">Terms</a>
+<a class="hover:text-primary transition-colors" href="#">Contact</a>
+</div>
+</div>
+</footer>
+</div>
+</div>
+</body></html>

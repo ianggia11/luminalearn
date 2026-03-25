@@ -1,0 +1,30 @@
+# Course Enrollment Web App - Design Requirements
+
+## Visual Style: "The Clean Professional"
+- **Typography:** Legible sans-serif (Inter/Roboto).
+- **Color Palette:**
+  - Primary: Deep Navy (#1A202C)
+  - Accent: Action Blue (#3182CE)
+  - Status: Green (Approved), Amber (Pending), Red (Action Required)
+- **Layout:** Card Grid (Courses) and List View (Dashboard).
+
+## Page-by-Page Design
+
+### A. Landing Page (Public)
+- **Header:** Logo (left), "Login" button (right).
+- **Hero:** "Level up your skills. Browse our available courses below."
+- **Course Grid:** Cards with Title, Description snippet, and "Apply Now" button.
+
+### B. Login / Sign-up
+- **Form:** Centered card with Email and Password fields.
+- **Toggle:** "Don't have an account? Sign up here."
+
+### C. User Dashboard (Authenticated)
+- **Header:** Logo (left), Username/Logout (right).
+- **Status Table:** Course Name, Status Badge (pill style), Admin Notes.
+- **Action:** "Browse More Courses" button.
+
+## Interaction Logic
+- Logged-in users see "My Dashboard" instead of "Login".
+- "Apply Now" redirects to login if not authenticated.
+- Dashboard shows "New" badge for recent admin updates.

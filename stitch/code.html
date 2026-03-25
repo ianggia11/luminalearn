@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+
+<html lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>User Dashboard - Learning Portal</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#66b2b2",
+                        "accent-light": "#b2d8d8",
+                        "background-light": "#f6f7f7",
+                        "background-dark": "#161c1c",
+                    },
+                    fontFamily: {
+                        "display": ["Inter", "sans-serif"]
+                    },
+                    borderRadius: {"DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px"},
+                },
+            },
+        }
+    </script>
+</head>
+<body class="bg-background-light dark:bg-background-dark font-display text-slate-900 dark:text-slate-100">
+<div class="relative flex h-auto min-h-screen w-full flex-col group/design-root overflow-x-hidden">
+<div class="layout-container flex h-full grow flex-col">
+<!-- Top Navigation Bar -->
+<header class="flex items-center justify-between whitespace-nowrap border-b border-solid border-slate-200 dark:border-slate-800 bg-white dark:bg-background-dark px-6 md:px-10 py-3 sticky top-0 z-50">
+<div class="flex items-center gap-8">
+<div class="flex items-center gap-4 text-primary">
+<div class="size-6">
+<span class="material-symbols-outlined text-3xl">database</span>
+</div>
+<h2 class="text-slate-900 dark:text-white text-lg font-bold leading-tight tracking-[-0.015em]">Lumina Learn</h2>
+</div>
+<nav class="hidden md:flex items-center gap-9">
+<a class="text-slate-700 dark:text-slate-300 text-sm font-medium hover:text-primary transition-colors" href="#">My Courses</a>
+<a class="text-slate-700 dark:text-slate-300 text-sm font-medium hover:text-primary transition-colors" href="#">Applications</a>
+<a class="text-slate-700 dark:text-slate-300 text-sm font-medium hover:text-primary transition-colors" href="#">Certificates</a>
+</nav>
+</div>
+<div class="flex flex-1 justify-end gap-4 md:gap-8 items-center">
+<label class="hidden sm:flex flex-col min-w-40 h-10 max-w-64">
+<div class="flex w-full flex-1 items-stretch rounded-lg h-full bg-slate-100 dark:bg-slate-800">
+<div class="text-slate-500 flex items-center justify-center pl-4">
+<span class="material-symbols-outlined text-xl">search</span>
+</div>
+<input class="form-input flex w-full min-w-0 flex-1 border-none bg-transparent focus:ring-0 placeholder:text-slate-500 text-sm" placeholder="Search courses..." value=""/>
+</div>
+</label>
+<div class="flex items-center gap-3">
+<div class="bg-center bg-no-repeat aspect-square bg-cover rounded-full size-10 border-2 border-primary" data-alt="User profile picture of a young professional man" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuA_i6UbEvuwwep0pzm5DOGu-4HLRJPVOmdPPWglr1PtItCFXjm2r9NE575ODd1PBA3huFq0wsRuCr-m5pQ8hPdXgVRWbXTzWWrhLPzsRb77jp1K6EnyHzIgnxL7w2TSLIT7F2hLnR3fwGqBxEJ9fLrSyLl9CdZCIVrkBDfgAbjyskQFWbI_yos94p1MQ_rcnr4RZG8KfUmz3meErARBKuL8jNNmfDJhO9NtC6PZGuvYFI1WWi6_tIY_dWZs9AUD-B25ya4ab6vC1mHw");'></div>
+</div>
+</div>
+</header>
+<div class="px-4 md:px-10 lg:px-40 flex flex-1 justify-center py-8">
+<div class="layout-content-container flex flex-col max-w-[1200px] flex-1">
+<div class="grid grid-cols-1 lg:grid-cols-4 gap-8">
+<!-- Sidebar Navigation -->
+<aside class="lg:col-span-1 flex flex-col gap-6">
+<div class="flex flex-col gap-4 bg-white dark:bg-slate-900 p-6 rounded-xl shadow-sm border border-slate-100 dark:border-slate-800">
+<div class="flex gap-3 items-center">
+<div class="bg-center bg-no-repeat aspect-square bg-cover rounded-full size-12" data-alt="Alex Johnson profile photo" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuB_wsY-zVLetwIQjfwWZWF10RWlwTP9dWmpexcEDDzTu78eQnU1C7Ozzu-EpXA3cpQgsJ4LjeZpg3kaXpi-72N7-MLsr6bf8HXe95O2dzk-uV9ZRo6oRZFYbtKTgMSwP_TVXY1rN6tZnuZ0Z1UumGR2fHyp347m4i03yryfOv4rjApIC-NDNxblNjddjKgW7R7xPUEdGzvFMp8R5tTYxGu6xtcTVPgVsUklNNxm9hEaKxF4MXyAsrg6OZAE7WataMj3hvpM3HRj9Zt9");'></div>
+<div class="flex flex-col">
+<h1 class="text-slate-900 dark:text-white text-base font-bold leading-normal">Alex Johnson</h1>
+<p class="text-primary text-xs font-semibold uppercase tracking-wider">Premium Member</p>
+</div>
+</div>
+<hr class="border-slate-100 dark:border-slate-800 my-2"/>
+<nav class="flex flex-col gap-1">
+<a class="flex items-center gap-3 px-3 py-2.5 rounded-lg bg-primary text-white" href="#">
+<span class="material-symbols-outlined text-xl">dashboard</span>
+<p class="text-sm font-medium">Dashboard</p>
+</a>
+<a class="flex items-center gap-3 px-3 py-2.5 rounded-lg text-slate-600 dark:text-slate-400 hover:bg-slate-50 dark:hover:bg-slate-800 transition-colors" href="#">
+<span class="material-symbols-outlined text-xl">school</span>
+<p class="text-sm font-medium">Courses</p>
+</a>
+<a class="flex items-center gap-3 px-3 py-2.5 rounded-lg text-slate-600 dark:text-slate-400 hover:bg-slate-50 dark:hover:bg-slate-800 transition-colors" href="#">
+<span class="material-symbols-outlined text-xl">chat</span>
+<p class="text-sm font-medium">Messages</p>
+</a>
+<a class="flex items-center gap-3 px-3 py-2.5 rounded-lg text-slate-600 dark:text-slate-400 hover:bg-slate-50 dark:hover:bg-slate-800 transition-colors" href="#">
+<span class="material-symbols-outlined text-xl">settings</span>
+<p class="text-sm font-medium">Settings</p>
+</a>
+</nav>
+</div>
+</aside>
+<!-- Main Content Area -->
+<main class="lg:col-span-3 flex flex-col gap-6">
+<!-- Welcome Header -->
+<div class="flex flex-col sm:flex-row sm:items-end justify-between gap-4">
+<div class="flex flex-col gap-1">
+<h2 class="text-slate-900 dark:text-white text-3xl font-black leading-tight tracking-tight">Welcome back, Alex</h2>
+<p class="text-slate-500 dark:text-slate-400 text-base font-normal">Track your learning progress and current applications.</p>
+</div>
+<button class="bg-primary text-white px-6 py-2.5 rounded-lg font-semibold text-sm hover:brightness-110 transition-all flex items-center gap-2">
+<span class="material-symbols-outlined text-lg">explore</span>
+                                Browse More Courses
+                            </button>
+</div>
+<!-- Quick Stats -->
+<div class="grid grid-cols-1 sm:grid-cols-3 gap-4">
+<div class="flex flex-col gap-2 rounded-xl p-6 bg-white dark:bg-slate-900 border border-slate-100 dark:border-slate-800 shadow-sm">
+<div class="flex items-center justify-between">
+<p class="text-slate-500 dark:text-slate-400 text-sm font-medium">Active Courses</p>
+<span class="material-symbols-outlined text-primary">play_circle</span>
+</div>
+<p class="text-slate-900 dark:text-white text-3xl font-bold">4</p>
+<div class="w-full bg-slate-100 dark:bg-slate-800 h-1.5 rounded-full mt-2">
+<div class="bg-primary h-1.5 rounded-full w-3/4"></div>
+</div>
+</div>
+<div class="flex flex-col gap-2 rounded-xl p-6 bg-white dark:bg-slate-900 border border-slate-100 dark:border-slate-800 shadow-sm">
+<div class="flex items-center justify-between">
+<p class="text-slate-500 dark:text-slate-400 text-sm font-medium">Completed</p>
+<span class="material-symbols-outlined text-primary">verified</span>
+</div>
+<p class="text-slate-900 dark:text-white text-3xl font-bold">12</p>
+<p class="text-primary text-xs font-semibold">+2 this month</p>
+</div>
+<div class="flex flex-col gap-2 rounded-xl p-6 bg-white dark:bg-slate-900 border border-slate-100 dark:border-slate-800 shadow-sm">
+<div class="flex items-center justify-between">
+<p class="text-slate-500 dark:text-slate-400 text-sm font-medium">Applications</p>
+<span class="material-symbols-outlined text-primary">description</span>
+</div>
+<p class="text-slate-900 dark:text-white text-3xl font-bold">3</p>
+<p class="text-slate-400 text-xs font-semibold">1 awaiting review</p>
+</div>
+</div>
+<!-- Course Applications List -->
+<div class="bg-white dark:bg-slate-900 rounded-xl shadow-sm border border-slate-100 dark:border-slate-800 overflow-hidden">
+<div class="px-6 py-5 border-b border-slate-100 dark:border-slate-800 flex items-center justify-between bg-white dark:bg-slate-900">
+<h3 class="text-slate-900 dark:text-white text-lg font-bold">Course Applications</h3>
+<button class="text-primary text-sm font-semibold hover:underline">View All</button>
+</div>
+<div class="overflow-x-auto">
+<table class="w-full text-left border-collapse">
+<thead class="bg-accent-light/20 dark:bg-primary/10">
+<tr>
+<th class="px-6 py-3 text-xs font-bold text-slate-600 dark:text-slate-400 uppercase tracking-wider">Course Name</th>
+<th class="px-6 py-3 text-xs font-bold text-slate-600 dark:text-slate-400 uppercase tracking-wider">Applied Date</th>
+<th class="px-6 py-3 text-xs font-bold text-slate-600 dark:text-slate-400 uppercase tracking-wider">Status</th>
+<th class="px-6 py-3 text-xs font-bold text-slate-600 dark:text-slate-400 uppercase tracking-wider">Action</th>
+</tr>
+</thead>
+<tbody class="divide-y divide-slate-100 dark:divide-slate-800">
+<tr class="hover:bg-accent-light/10 dark:hover:bg-primary/5 transition-colors">
+<td class="px-6 py-4">
+<div class="flex items-center gap-3">
+<div class="size-8 rounded bg-primary/20 flex items-center justify-center text-primary">
+<span class="material-symbols-outlined text-lg">code</span>
+</div>
+<span class="text-sm font-semibold text-slate-900 dark:text-white">Advanced React Patterns</span>
+</div>
+</td>
+<td class="px-6 py-4 text-sm text-slate-500 dark:text-slate-400">Oct 12, 2023</td>
+<td class="px-6 py-4">
+<span class="inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium bg-primary text-white">
+                                                    In Review
+                                                </span>
+</td>
+<td class="px-6 py-4">
+<button class="text-slate-400 hover:text-primary transition-colors">
+<span class="material-symbols-outlined">more_horiz</span>
+</button>
+</td>
+</tr>
+<tr class="hover:bg-accent-light/10 dark:hover:bg-primary/5 transition-colors">
+<td class="px-6 py-4">
+<div class="flex items-center gap-3">
+<div class="size-8 rounded bg-primary/20 flex items-center justify-center text-primary">
+<span class="material-symbols-outlined text-lg">palette</span>
+</div>
+<span class="text-sm font-semibold text-slate-900 dark:text-white">UI/UX Strategy Masterclass</span>
+</div>
+</td>
+<td class="px-6 py-4 text-sm text-slate-500 dark:text-slate-400">Oct 05, 2023</td>
+<td class="px-6 py-4">
+<span class="inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium bg-green-500 text-white">
+                                                    Accepted
+                                                </span>
+</td>
+<td class="px-6 py-4">
+<button class="text-slate-400 hover:text-primary transition-colors">
+<span class="material-symbols-outlined">more_horiz</span>
+</button>
+</td>
+</tr>
+<tr class="hover:bg-accent-light/10 dark:hover:bg-primary/5 transition-colors">
+<td class="px-6 py-4">
+<div class="flex items-center gap-3">
+<div class="size-8 rounded bg-primary/20 flex items-center justify-center text-primary">
+<span class="material-symbols-outlined text-lg">database</span>
+</div>
+<span class="text-sm font-semibold text-slate-900 dark:text-white">Cloud Architecture Essentials</span>
+</div>
+</td>
+<td class="px-6 py-4 text-sm text-slate-500 dark:text-slate-400">Sep 28, 2023</td>
+<td class="px-6 py-4">
+<span class="inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium bg-primary text-white">
+                                                    Pending
+                                                </span>
+</td>
+<td class="px-6 py-4">
+<button class="text-slate-400 hover:text-primary transition-colors">
+<span class="material-symbols-outlined">more_horiz</span>
+</button>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<!-- Recommendations Section -->
+<div class="flex flex-col gap-4">
+<h3 class="text-slate-900 dark:text-white text-lg font-bold">Recommended for You</h3>
+<div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+<div class="group relative overflow-hidden rounded-xl bg-white dark:bg-slate-900 border border-slate-100 dark:border-slate-800 p-4 flex gap-4 hover:shadow-md transition-shadow">
+<div class="size-24 rounded-lg bg-cover bg-center shrink-0" data-alt="Abstract code on monitor" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuDW-4tV0811P8big1Qqnii4grRIXV0dRSC-L1JS4fUPupYMihC64zdZFymVldkM_lBSl6yebpta73zgPZWcvKDwEzF3dli8RKAm7qejFsJPWXvtc5eRBrrOyt1h4HWPntrkYHRNK1Q4bo_2mCJBqONDjjvk0JsY4DQ46q8uBUdXqM31kJoG8doAqKfKBY-eP4Pa5nmgMiJ8p4uH4gta0buzC6LbrLr_EdApZzOzwtvIgmHn9-O0SQ_3TVQd1KbY3D_GFHhKS0LyiQvE");'></div>
+<div class="flex flex-col justify-between py-1">
+<div>
+<h4 class="text-slate-900 dark:text-white font-bold text-sm group-hover:text-primary transition-colors">Node.js Performance Tuning</h4>
+<p class="text-slate-500 text-xs mt-1">8 hours • Beginner</p>
+</div>
+<div class="flex items-center gap-1 text-primary">
+<span class="material-symbols-outlined text-sm">star</span>
+<span class="text-xs font-bold">4.9</span>
+</div>
+</div>
+</div>
+<div class="group relative overflow-hidden rounded-xl bg-white dark:bg-slate-900 border border-slate-100 dark:border-slate-800 p-4 flex gap-4 hover:shadow-md transition-shadow">
+<div class="size-24 rounded-lg bg-cover bg-center shrink-0" data-alt="Business analytics dashboard" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuB5FCAKDYbbDJPrfD0PVYRTQWE7kCh9O47IHHsD5HkLQjLF6SUcLCSjgdW2D601x3yi6EGBQNT7fRQJnZYbgYdvwNiZnHNLE9C3Akp_8JHSxTv-xpu2HhTgmSXTzSEj3II6sh_TMitybq_GBzN8epLX5LULHqpfVOpeF47MlFWyQdvgvJ6dJv_x00CCXgAcnRrfEl_GRIcpt560pKJZSd-Voimd9kHDCM1of3qqQalV2r_A9BDJaon9AGh-XNDyDwuecjGPFLey6QL8");'></div>
+<div class="flex flex-col justify-between py-1">
+<div>
+<h4 class="text-slate-900 dark:text-white font-bold text-sm group-hover:text-primary transition-colors">Data Science with Python</h4>
+<p class="text-slate-500 text-xs mt-1">12 hours • Intermediate</p>
+</div>
+<div class="flex items-center gap-1 text-primary">
+<span class="material-symbols-outlined text-sm">star</span>
+<span class="text-xs font-bold">4.8</span>
+</div>
+</div>
+</div>
+</div>
+</div>
+</main>
+</div>
+</div>
+</div>
+</div>
+</div>
+</body></html>
